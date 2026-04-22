@@ -1,0 +1,10 @@
+{
+  "name": "context-overflow-in-tool-calling-agents",
+  "description": "Manages conversation history and tool output size in multi-turn tool-calling agents to prevent context window overflow while preserving tool call coherence. TRIGGER when: building a multi-turn agent with tool calling, conversation history grows across turns and approaches context limits, tool outputs are large or unpredictable in size, agent loses context or repeats tool calls after long sessions, designing prompt compression strategy for cost-sensitive execution paths.",
+  "author": "Significant-Gravitas",
+  "repository": "AutoGPT",
+  "category": ["state-memory", "execution-control"],
+  "source": "external https://github.com/Significant-Gravitas/AutoGPT",
+  "commit_date": "31-03-2026",
+  "source_hash": "19d775c43"
+}

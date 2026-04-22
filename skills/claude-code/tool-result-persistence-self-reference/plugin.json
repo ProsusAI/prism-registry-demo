@@ -1,0 +1,10 @@
+{
+  "name": "tool-result-persistence-self-reference",
+  "description": "Prevent circular references when persisting large tool results to disk for session resume — tools that read arbitrary paths or URLs must not have their output persisted. TRIGGER when: adding result persistence to a tool system, designing session-resume tool result replay, adding a new tool that reads files or external resources.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["tools", "persistence"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

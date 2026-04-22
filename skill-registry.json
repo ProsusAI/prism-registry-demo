@@ -1,0 +1,603 @@
+{
+  "generated_by": "prism-registry",
+  "generated_at": "2026-04-22T14:52:27Z",
+  "skill_count": 43,
+  "skills": [
+    {
+      "name": "context-overflow-in-tool-calling-agents",
+      "description": "Manages conversation history and tool output size in multi-turn tool-calling agents to prevent context window overflow while preserving tool call coherence. TRIGGER when: building a multi-turn agent with tool calling, conversation history grows across turns and approaches context limits, tool outputs are large or unpredictable in size, agent loses context or repeats tool calls after long sessions, designing prompt compression strategy for cost-sensitive execution paths.",
+      "author": "Significant-Gravitas",
+      "repository": "AutoGPT",
+      "category": [
+        "state-memory",
+        "execution-control"
+      ],
+      "source": "external https://github.com/Significant-Gravitas/AutoGPT",
+      "commit_date": "31-03-2026",
+      "source_hash": "19d775c43",
+      "path": "skills/AutoGPT/context-overflow-in-tool-calling-agents"
+    },
+    {
+      "name": "shared-resource-contention-in-concurrent-agent-execution",
+      "description": "Prevents race conditions and security holes when agent tasks execute in parallel and share credentials, network access, or filesystem resources. TRIGGER when: building agents that execute multiple tool calls or tasks concurrently, agents share OAuth credentials or API keys across parallel executions, agent code execution runs on shared multi-tenant infrastructure, agents need both temporary scratch space and persistent storage across turns, designing workspace isolation for agent sessions.",
+      "author": "Significant-Gravitas",
+      "repository": "AutoGPT",
+      "category": [
+        "execution-control",
+        "security"
+      ],
+      "source": "external https://github.com/Significant-Gravitas/AutoGPT",
+      "commit_date": "31-03-2026",
+      "source_hash": "19d775c43",
+      "path": "skills/AutoGPT/shared-resource-contention-in-concurrent-agent-execution"
+    },
+    {
+      "name": "agent-session-identity-location-split",
+      "description": "Agent session design: separating stable session identity from mutable working location. TRIGGER when: designing session storage for agents that support worktrees, remote execution, or mid-session directory changes; when debugging resume failures after a working directory change; when comparing session IDs across API versions or compat layers; or when a team member asks why getCwd() should not be used to derive session file paths.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "architecture",
+        "persistence"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/agent-session-identity-location-split"
+    },
+    {
+      "name": "agentic-loop-invariant-side-calls",
+      "description": "Prevent redundant API calls from side operations whose inputs don't change across loop iterations in a multi-step agentic tool-use loop. TRIGGER when: adding a background API call or prefetch to an agentic tool-use loop, designing context enrichment for a multi-step agent, adding memory retrieval to a streaming tool pipeline.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "execution-control",
+        "architecture"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/agentic-loop-invariant-side-calls"
+    },
+    {
+      "name": "anthropic-api-cascaded-context-recovery",
+      "description": "Anthropic API agentic streaming loop: how to recover from context-size errors (prompt-too-long 413, max-output-tokens) without terminating the session. TRIGGER when: designing or implementing any agentic loop that streams from the Anthropic API, when debugging sessions that terminate unexpectedly on context overflow, when deciding how to wire post-turn hooks, or when a team member asks why errors are withheld from the stream rather than surfaced immediately.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "execution-control",
+        "state-memory"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/anthropic-api-cascaded-context-recovery"
+    },
+    {
+      "name": "anthropic-api-prompt-cache-preservation",
+      "description": "Anthropic API prompt caching: how to keep server-side cache hits stable across a long agentic session. TRIGGER when designing session state models for agentic applications, when debugging unexpected cache misses after feature flag changes, when deciding whether to re-evaluate eligibility or feature headers per-turn, or when configuring compaction to avoid busting the prompt cache. Load even before cache misses are observed \u2014 these decisions must be made at design time.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "state-memory",
+        "networking"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/anthropic-api-prompt-cache-preservation"
+    },
+    {
+      "name": "anthropic-api-thinking-blocks",
+      "description": "Anthropic API extended thinking: how thinking blocks must be preserved and when they cause 400 errors. TRIGGER when: implementing extended thinking in a multi-turn agentic loop, when debugging 400 errors with 'thinking blocks cannot be modified', when implementing model fallback that switches from a thinking-enabled model, or when deciding what to strip before a retry. Load when writing any code that handles extended thinking across multiple turns.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "execution-control",
+        "state-memory"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/anthropic-api-thinking-blocks"
+    },
+    {
+      "name": "anthropic-api-tool-dispatch",
+      "description": "Anthropic API tool use: detecting when the model has called a tool and dispatching tool execution correctly. TRIGGER when: implementing tool dispatch in a streaming API loop, when debugging tool calls that are silently missed, or when a team member asks why stop_reason should not be used as the tool-dispatch signal. Load when writing any code that processes streaming responses for tool use.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "tools",
+        "execution-control"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/anthropic-api-tool-dispatch"
+    },
+    {
+      "name": "auth-before-feature-flag-init",
+      "description": "Initialize authentication before any feature-flag or remote config system that uses user identity for targeting \u2014 otherwise authenticated users are denied on cache miss. TRIGGER when: configuring startup initialization order for a service with user-specific feature flags, adding feature gating to an authenticated endpoint, integrating a feature-flag SDK into an auth-required service.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "security",
+        "execution-control"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/auth-before-feature-flag-init"
+    },
+    {
+      "name": "parallel-tool-executor-concurrency",
+      "description": "Parallel tool executors: how to safely batch concurrent tool calls while preserving deterministic context mutation. TRIGGER when: designing a tool executor that runs multiple tool calls concurrently, when debugging non-deterministic context state after concurrent tool execution, when deciding whether a tool call is safe to run concurrently, or when a write tool appears in a batch with read tools. Load when writing any code that executes multiple tool calls in parallel.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "tools",
+        "execution-control"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/parallel-tool-executor-concurrency"
+    },
+    {
+      "name": "pipeline-hook-error-visibility",
+      "description": "Ensure optional post-step hooks in a processing pipeline surface failures rather than silently swallowing them. TRIGGER when: adding a hook invocation to a processing pipeline, designing optional post-processing callbacks, wiring post-sampling or post-tool hooks into an agentic loop.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "execution-control",
+        "monitoring-evaluation"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/pipeline-hook-error-visibility"
+    },
+    {
+      "name": "polling-loop-capacity-liveness",
+      "description": "Polling loops with capacity throttling: how to prevent tight-loop failures when a polling service enters an at-capacity state. TRIGGER when: designing a polling loop that has a 'throttled' or 'at capacity' mode, when configuring sleep intervals for capacity-throttled polling, or when debugging a service that appears to be looping at HTTP-round-trip speed. Load when writing any poll loop that can enter a reduced-activity mode.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "execution-control",
+        "networking"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/polling-loop-capacity-liveness"
+    },
+    {
+      "name": "remote-config-validation-atomicity",
+      "description": "Remote config validation for interdependent fields: why to reject the entire config object rather than clamping individual fields. TRIGGER when designing validation for remotely-tunable configuration objects with fields that constrain each other, when choosing between whole-object rejection vs. per-field clamping in a validation schema, or when debugging a service that behaved unexpectedly after a remote config push. Load when writing validation for any config that is served remotely and has cross-field constraints.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "execution-control",
+        "operations-deployment"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/remote-config-validation-atomicity"
+    },
+    {
+      "name": "tool-result-persistence-self-reference",
+      "description": "Prevent circular references when persisting large tool results to disk for session resume \u2014 tools that read arbitrary paths or URLs must not have their output persisted. TRIGGER when: adding result persistence to a tool system, designing session-resume tool result replay, adding a new tool that reads files or external resources.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "tools",
+        "persistence"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/tool-result-persistence-self-reference"
+    },
+    {
+      "name": "work-queue-auth-expiry-redispatch",
+      "description": "Work queues with short-lived auth credentials: why token expiry requires re-dispatching the claimed work item, not just refreshing the token. TRIGGER when building a work queue (Redis Streams, SQS, Kafka, RabbitMQ) where consumers authenticate with short-lived credentials (JWTs, OAuth tokens, signed claims), when debugging a consumer that appears healthy but receives no new work, or when designing token refresh for long-running queue consumers. Load when combining any ACK/claim-based queue with short-lived auth.",
+      "author": "Anthropic",
+      "repository": "claude-code",
+      "category": [
+        "networking",
+        "execution-control"
+      ],
+      "source": "external",
+      "commit_date": "01-04-2026",
+      "source_hash": "",
+      "path": "skills/claude-code/work-queue-auth-expiry-redispatch"
+    },
+    {
+      "name": "agent-framework-app-boundary",
+      "description": "Keeps agent framework code decoupled from application layer code and ensures cross-process config changes propagate without restarts. TRIGGER when: packaging an agent framework for embedded or library use, deploying an agent framework and API gateway as separate processes, debugging stale tool configs that don't update after config edits, ensuring config changes in one process are visible to another without restart.",
+      "author": "larabasegg",
+      "repository": "deer-flow",
+      "category": [
+        "architecture",
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/agent-framework-app-boundary"
+    },
+    {
+      "name": "agent-memory-content-corruption",
+      "description": "Prevents agent long-term memory from being degraded by session-scoped references, low-confidence LLM extractions, and cross-agent or cross-user contamination. TRIGGER when: building persistent memory for a multi-turn agent, memory retrieved in future sessions contains stale or invalid references, agent performance degrades as memory grows, deploying an agent in a multi-user or multi-agent environment.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "state-memory"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/agent-memory-content-corruption"
+    },
+    {
+      "name": "agent-memory-persistence",
+      "description": "Ensures agent memory writes are non-blocking and crash-safe in production. TRIGGER when: adding persistent memory to a multi-turn agent, memory updates slowing agent response times, agent memory files corrupted after process crash or restart, debugging partial writes or JSON parse errors in memory storage.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "state-memory",
+        "persistence"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/agent-memory-persistence"
+    },
+    {
+      "name": "agent-message-history-middleware",
+      "description": "Maintains message history invariants required by LLM APIs when middleware injects or repairs messages mid-conversation. TRIGGER when: building middleware that injects messages into an ongoing conversation, handling agent interruption or cancellation that leaves tool calls without responses, injecting warnings or status messages mid-conversation across multiple LLM providers.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "execution-control",
+        "state-memory"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/agent-message-history-middleware"
+    },
+    {
+      "name": "agent-security-bypass-modes",
+      "description": "Prevents agent safety controls from being silently bypassed via artifact serving, guardrail provider errors, or injected instructions in tool results. TRIGGER when: serving files or artifacts generated by an agent, configuring guardrails or content filters for tool calls, ingesting web search results or file content into agent message history, reviewing security posture of a production agent deployment.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "security"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/agent-security-bypass-modes"
+    },
+    {
+      "name": "async-file-upload-streaming",
+      "description": "Prevents gateway memory exhaustion and event loop blocking when handling large file uploads in async web frameworks. TRIGGER when: implementing a file upload endpoint in an async web framework (FastAPI, aiohttp, Django Channels, or similar), choosing between reading the full body vs chunked streaming for file ingestion, adding file size limits to an async upload handler.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "security"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/async-file-upload-streaming"
+    },
+    {
+      "name": "docker-compose-env-precedence",
+      "description": "Docker Compose environment variable precedence: failure modes when mixing the environment section and env_file for the same variable. TRIGGER when: writing docker-compose.yml with both environment and env_file sections, using ${VAR:-default} syntax in an environment section, debugging why .env overrides are silently ignored at docker compose up.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/docker-compose-env-precedence"
+    },
+    {
+      "name": "extension-env-var-validation",
+      "description": "Prevents silently misconfigured extensions when env var placeholders in plugin config resolve to empty string at load time. TRIGGER when: adding env var references to MCP server or plugin configs, designing config resolution for user-supplied extension manifests, choosing between fail-fast and silent-fallback for missing environment variables in optional integrations.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "operations-deployment",
+        "security"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/extension-env-var-validation"
+    },
+    {
+      "name": "gemini-thinking-gateway-signature",
+      "description": "Gemini thinking models via OpenAI-compatible gateway: failure modes when routing Gemini thinking-enabled models through LangChain's ChatOpenAI and an OpenAI-compatible proxy. TRIGGER when: using Gemini thinking models via an OpenAI-compatible gateway, routing any model with thinking/reasoning content blocks through LangChain ChatOpenAI, debugging HTTP 400 errors on multi-turn conversations that include tool calls.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "networking",
+        "tools"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/gemini-thinking-gateway-signature"
+    },
+    {
+      "name": "langgraph-client-thread-persistence",
+      "description": "Prevents multi-turn conversation amnesia when a LangGraph client accepts thread_id but has no checkpointer configured. TRIGGER when: implementing a LangGraph client that accepts thread_id, building a multi-turn conversation interface on top of a LangGraph graph, choosing whether to configure a checkpointer for a stateful agent client.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "state-memory",
+        "architecture"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/langgraph-client-thread-persistence"
+    },
+    {
+      "name": "langgraph-recursion-limit-research",
+      "description": "Prevents silent task truncation when a research or multi-step agent hits LangGraph's default recursion limit mid-task. TRIGGER when: configuring run parameters for a LangGraph agent that uses multi-step tool calls, setting up a research or planning agent with web search or code execution tools, tuning LangGraph runtime behavior for production workloads.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "execution-control",
+        "architecture"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/langgraph-recursion-limit-research"
+    },
+    {
+      "name": "langgraph-server-invocation-context",
+      "description": "LangGraph Server invocation context: failure modes when reading thread_id, user_id, or other configurable fields inside a LangGraph agent deployed behind LangGraph Server. TRIGGER when: writing middleware or tools that access thread_id or user_id, deploying a LangGraph agent via LangGraph Server (not direct Python invocation), debugging silent failures where context reads return None in server mode but work locally.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "execution-control",
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/langgraph-server-invocation-context"
+    },
+    {
+      "name": "langgraph-subgraph-checkpoint-filter",
+      "description": "Prevents phantom thread entries when listing threads from the LangGraph checkpointer in deployments with hierarchical agent graphs. TRIGGER when: implementing thread listing from a LangGraph checkpointer, building a thread index or search feature over LangGraph state, designing a system that uses sub-graphs or parallel node execution within a parent LangGraph graph.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "state-memory",
+        "architecture"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/langgraph-subgraph-checkpoint-filter"
+    },
+    {
+      "name": "large-tool-registry-deferred-schema",
+      "description": "Prevents context window inflation and tool selection degradation when an agent connects to many tools. TRIGGER when: registering more than 10-15 tools in any agent tool system (MCP servers, OpenAI function calling, Anthropic tool_use, custom registries), noticing degraded tool selection accuracy as the tool set grows, context costs increasing disproportionately with each new tool added, adding dynamic tool discovery to a large-tool-set agent.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "state-memory",
+        "architecture"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/large-tool-registry-deferred-schema"
+    },
+    {
+      "name": "safe-archive-extraction",
+      "description": "Prevents path traversal, ZIP bomb, and symlink attacks when extracting user-supplied ZIP archives. TRIGGER when: implementing archive extraction for user-uploaded files, building a plugin or extension installer that accepts ZIP packages, designing any feature that extracts archives from untrusted sources.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "security",
+        "tools"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/safe-archive-extraction"
+    },
+    {
+      "name": "subagent-concurrency-execution",
+      "description": "Prevents deadlocks, silent work loss, and async failures when running concurrent subagents in a thread pool. TRIGGER when: building a multi-agent system with concurrent subagent execution, subagent tasks silently disappearing or never executing, adding async tool support to thread-pool-based agent executors, limiting the number of concurrent subagent invocations.",
+      "author": "Bytedance Inc",
+      "repository": "deer-flow",
+      "category": [
+        "execution-control",
+        "architecture"
+      ],
+      "source": "external https://github.com/bytedance/deer-flow.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "64e0f53",
+      "path": "skills/deer-flow/subagent-concurrency-execution"
+    },
+    {
+      "name": "context-compression-in-rag-pipelines",
+      "description": "Manages context accumulation and compression when passing retrieved content to LLMs across multi-step retrieval pipelines. TRIGGER when: building a RAG pipeline where multiple retrieval steps accumulate context, retrieved context exceeds model context window limits, balancing retrieval recall against LLM input cost, implementing recursive or depth-based research that accumulates context across levels.",
+      "author": "Assaf Elovic",
+      "repository": "gpt-researcher",
+      "category": [
+        "RAG",
+        "state-memory"
+      ],
+      "source": "external https://github.com/assafelovic/gpt-researcher.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "9e4a19ae",
+      "path": "skills/gpt-researcher/context-compression-in-rag-pipelines"
+    },
+    {
+      "name": "multi-tier-model-routing",
+      "description": "Routes different agent pipeline steps to different model tiers based on task complexity to balance cost and quality. TRIGGER when: building an agent pipeline with multiple LLM call types (classification, decomposition, synthesis), optimizing LLM costs in a multi-step agent, choosing between reasoning models and chat models for different pipeline stages, adding fallback chains when a model tier fails mid-pipeline.",
+      "author": "Assaf Elovic",
+      "repository": "gpt-researcher",
+      "category": [
+        "architecture",
+        "execution-control"
+      ],
+      "source": "external https://github.com/assafelovic/gpt-researcher.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "9e4a19ae",
+      "path": "skills/gpt-researcher/multi-tier-model-routing"
+    },
+    {
+      "name": "recursive-pipeline-resilience",
+      "description": "Makes multi-step and recursive agent pipelines resilient to failures, concurrency explosions, and redundant external calls. TRIGGER when: building a pipeline that spawns recursive sub-tasks, agent pipeline fails mid-execution and loses all accumulated work, concurrent sub-tasks overwhelm external APIs or accumulate shared state unsafely, long-running agent tasks need checkpointing or resume capability.",
+      "author": "Assaf Elovic",
+      "repository": "gpt-researcher",
+      "category": [
+        "execution-control",
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/assafelovic/gpt-researcher.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "9e4a19ae",
+      "path": "skills/gpt-researcher/recursive-pipeline-resilience"
+    },
+    {
+      "name": "structured-output-across-providers",
+      "description": "Gets reliable structured output from LLM calls when supporting multiple providers with inconsistent tool-calling and structured output capabilities. TRIGGER when: building an agent that must work across multiple LLM providers, parsing structured JSON from LLM responses without native tool calling, LLM-based classification or selection step produces unparseable output, adding fallback logic for structured output extraction.",
+      "author": "Assaf Elovic",
+      "repository": "gpt-researcher",
+      "category": [
+        "tools",
+        "architecture"
+      ],
+      "source": "external https://github.com/assafelovic/gpt-researcher.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "9e4a19ae",
+      "path": "skills/gpt-researcher/structured-output-across-providers"
+    },
+    {
+      "name": "agent-resource-budgeting",
+      "description": "Dual-layer resource budget enforcement for agents \u2014 context window budget via observation-level truncation and monetary cost budget via per-agent plus global tracking. TRIGGER when: agent tool outputs inflate message history and risk context overflow, running multiple agent instances in parallel with a shared cost ceiling, agent crashes on context window exceeded with no recovery, cost tracking errors crash the agent instead of degrading gracefully.",
+      "author": "Kilian Lieret, Carlos E. Jimenez",
+      "repository": "mini-swe-agent",
+      "category": [
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/SWE-agent/mini-swe-agent.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "f921ec3",
+      "path": "skills/mini-swe-agent/agent-resource-budgeting"
+    },
+    {
+      "name": "tool-interface-design-for-code-agents",
+      "description": "Architectural decisions for designing the tool layer of agents that execute code, covering tool granularity, action parsing compatibility, and task termination mechanisms. TRIGGER when: designing tools for an agent that runs shell commands or code, choosing between one generic execution tool and many specialized tools, adding support for models that lack native tool-call APIs, implementing task completion detection in a code-execution agent, building an agent that must work across multiple execution environments.",
+      "author": "Kilian Lieret, Carlos E. Jimenez",
+      "repository": "mini-swe-agent",
+      "category": [
+        "architecture"
+      ],
+      "source": "external https://github.com/SWE-agent/mini-swe-agent.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "f921ec3",
+      "path": "skills/mini-swe-agent/tool-interface-design-for-code-agents"
+    },
+    {
+      "name": "context-budget-in-multi-stage-pipelines",
+      "description": "Manages token budgets across multi-stage agent pipelines to prevent context degradation and token limit failures at each stage. TRIGGER when: building a multi-stage pipeline where outputs from one stage feed the next, agent hits token limits during later pipeline stages, planning quality degrades as accumulated context grows, raw tool outputs inflate context beyond model capacity.",
+      "author": "Lance Martin / LangChain",
+      "repository": "open_deep_research",
+      "category": [
+        "state-memory",
+        "architecture"
+      ],
+      "source": "external https://github.com/langchain-ai/open_deep_research.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "4ef14c1",
+      "path": "skills/open_deep_research/context-budget-in-multi-stage-pipelines"
+    },
+    {
+      "name": "supervisor-subagent-delegation",
+      "description": "Structures how a supervisor agent delegates, constrains, and communicates with parallel sub-agents to prevent redundant work and coordination failures. TRIGGER when: building a supervisor that dynamically delegates to sub-agents, sub-agents produce redundant or overlapping research, supervisor fires all tasks at once without assessing intermediate results, sub-agents lack sufficient context to complete tasks independently, agent over-parallelizes simple queries or under-parallelizes complex ones.",
+      "author": "Lance Martin / LangChain",
+      "repository": "open_deep_research",
+      "category": [
+        "architecture",
+        "execution-control"
+      ],
+      "source": "external https://github.com/langchain-ai/open_deep_research.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "4ef14c1",
+      "path": "skills/open_deep_research/supervisor-subagent-delegation"
+    },
+    {
+      "name": "agent-action-trust-boundaries",
+      "description": "Addresses the trust architecture problem where autonomous agents assess their own action risk, creating self-referential safety bypasses. TRIGGER when: building an agent that executes side-effectful actions, designing confirmation or approval gates for agent actions, agent has filesystem or network access in multi-tenant environments, implementing risk classification for autonomous tool use.",
+      "author": "OpenHands / All Hands AI",
+      "repository": "openhands-ai",
+      "category": [
+        "security",
+        "execution-control"
+      ],
+      "source": "external https://github.com/OpenHands/OpenHands.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "238cab4d0",
+      "path": "skills/openhands-ai/agent-action-trust-boundaries"
+    },
+    {
+      "name": "agent-knowledge-and-tool-injection",
+      "description": "Prevents agents from silently operating without relevant domain knowledge or with a stale tool set when knowledge and tools are loaded at startup rather than resolved per request. TRIGGER when: injecting domain or repository knowledge into agent prompts, integrating external tool servers whose tools may change at runtime, agent silently produces wrong output because user phrasing missed a trigger, building a system where knowledge sources or external tools are added post-deployment.",
+      "author": "OpenHands",
+      "repository": "openhands-ai",
+      "category": [
+        "tools",
+        "state-memory"
+      ],
+      "source": "external https://github.com/OpenHands/OpenHands",
+      "commit_date": "31-03-2026",
+      "source_hash": "238cab4d0",
+      "path": "skills/openhands-ai/agent-knowledge-and-tool-injection"
+    },
+    {
+      "name": "context-window-exhaustion-prevention",
+      "description": "Manages conversation history in multi-turn tool-calling agents to prevent context overflow while preserving tool call coherence. TRIGGER when: building a multi-turn agent with tool calling, conversation history exceeds context limits, agent repeats tool calls or loses context after long sessions, tool outputs inflate message history, agent needs to self-manage its context window.",
+      "author": "OpenHands / All Hands AI",
+      "repository": "openhands-ai",
+      "category": [
+        "state-memory",
+        "tools"
+      ],
+      "source": "external https://github.com/OpenHands/OpenHands.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "238cab4d0",
+      "path": "skills/openhands-ai/context-window-exhaustion-prevention"
+    },
+    {
+      "name": "llm-call-resilience-and-cost-control",
+      "description": "Handles silent LLM failures, model routing decisions, and budget enforcement when cost models are approximate. TRIGGER when: agent gets empty responses from LLM, routing requests across multiple models, tracking per-task LLM spend with budget limits, LLM provider returns unexpected empty completions.",
+      "author": "OpenHands / All Hands AI",
+      "repository": "openhands-ai",
+      "category": [
+        "execution-control",
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/OpenHands/OpenHands.git",
+      "commit_date": "31-03-2026",
+      "source_hash": "238cab4d0",
+      "path": "skills/openhands-ai/llm-call-resilience-and-cost-control"
+    }
+  ]
+}

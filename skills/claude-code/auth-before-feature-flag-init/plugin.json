@@ -1,0 +1,10 @@
+{
+  "name": "auth-before-feature-flag-init",
+  "description": "Initialize authentication before any feature-flag or remote config system that uses user identity for targeting — otherwise authenticated users are denied on cache miss. TRIGGER when: configuring startup initialization order for a service with user-specific feature flags, adding feature gating to an authenticated endpoint, integrating a feature-flag SDK into an auth-required service.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["security", "execution-control"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

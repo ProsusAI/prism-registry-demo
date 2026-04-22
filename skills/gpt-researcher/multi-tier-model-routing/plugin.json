@@ -1,0 +1,10 @@
+{
+  "name": "multi-tier-model-routing",
+  "description": "Routes different agent pipeline steps to different model tiers based on task complexity to balance cost and quality. TRIGGER when: building an agent pipeline with multiple LLM call types (classification, decomposition, synthesis), optimizing LLM costs in a multi-step agent, choosing between reasoning models and chat models for different pipeline stages, adding fallback chains when a model tier fails mid-pipeline.",
+  "author": "Assaf Elovic",
+  "repository": "gpt-researcher",
+  "category": ["architecture", "execution-control"],
+  "source": "external https://github.com/assafelovic/gpt-researcher.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "9e4a19ae"
+}

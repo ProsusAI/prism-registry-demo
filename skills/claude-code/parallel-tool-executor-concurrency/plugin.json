@@ -1,0 +1,10 @@
+{
+  "name": "parallel-tool-executor-concurrency",
+  "description": "Parallel tool executors: how to safely batch concurrent tool calls while preserving deterministic context mutation. TRIGGER when: designing a tool executor that runs multiple tool calls concurrently, when debugging non-deterministic context state after concurrent tool execution, when deciding whether a tool call is safe to run concurrently, or when a write tool appears in a batch with read tools. Load when writing any code that executes multiple tool calls in parallel.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["tools", "execution-control"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

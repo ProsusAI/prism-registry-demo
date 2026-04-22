@@ -1,0 +1,10 @@
+{
+  "name": "agent-knowledge-and-tool-injection",
+  "description": "Prevents agents from silently operating without relevant domain knowledge or with a stale tool set when knowledge and tools are loaded at startup rather than resolved per request. TRIGGER when: injecting domain or repository knowledge into agent prompts, integrating external tool servers whose tools may change at runtime, agent silently produces wrong output because user phrasing missed a trigger, building a system where knowledge sources or external tools are added post-deployment.",
+  "author": "OpenHands",
+  "repository": "openhands-ai",
+  "category": ["tools", "state-memory"],
+  "source": "external https://github.com/OpenHands/OpenHands",
+  "commit_date": "31-03-2026",
+  "source_hash": "238cab4d0"
+}

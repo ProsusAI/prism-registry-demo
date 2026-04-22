@@ -1,0 +1,10 @@
+{
+  "name": "anthropic-api-cascaded-context-recovery",
+  "description": "Anthropic API agentic streaming loop: how to recover from context-size errors (prompt-too-long 413, max-output-tokens) without terminating the session. TRIGGER when: designing or implementing any agentic loop that streams from the Anthropic API, when debugging sessions that terminate unexpectedly on context overflow, when deciding how to wire post-turn hooks, or when a team member asks why errors are withheld from the stream rather than surfaced immediately.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["execution-control", "state-memory"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

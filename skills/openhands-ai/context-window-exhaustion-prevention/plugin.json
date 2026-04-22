@@ -1,0 +1,10 @@
+{
+  "name": "context-window-exhaustion-prevention",
+  "description": "Manages conversation history in multi-turn tool-calling agents to prevent context overflow while preserving tool call coherence. TRIGGER when: building a multi-turn agent with tool calling, conversation history exceeds context limits, agent repeats tool calls or loses context after long sessions, tool outputs inflate message history, agent needs to self-manage its context window.",
+  "author": "OpenHands / All Hands AI",
+  "repository": "openhands-ai",
+  "category": ["state-memory", "tools"],
+  "source": "external https://github.com/OpenHands/OpenHands.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "238cab4d0"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "shared-resource-contention-in-concurrent-agent-execution",
+  "description": "Prevents race conditions and security holes when agent tasks execute in parallel and share credentials, network access, or filesystem resources. TRIGGER when: building agents that execute multiple tool calls or tasks concurrently, agents share OAuth credentials or API keys across parallel executions, agent code execution runs on shared multi-tenant infrastructure, agents need both temporary scratch space and persistent storage across turns, designing workspace isolation for agent sessions.",
+  "author": "Significant-Gravitas",
+  "repository": "AutoGPT",
+  "category": ["execution-control", "security"],
+  "source": "external https://github.com/Significant-Gravitas/AutoGPT",
+  "commit_date": "31-03-2026",
+  "source_hash": "19d775c43"
+}

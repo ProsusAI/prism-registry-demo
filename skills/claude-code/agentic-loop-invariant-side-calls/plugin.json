@@ -1,0 +1,10 @@
+{
+  "name": "agentic-loop-invariant-side-calls",
+  "description": "Prevent redundant API calls from side operations whose inputs don't change across loop iterations in a multi-step agentic tool-use loop. TRIGGER when: adding a background API call or prefetch to an agentic tool-use loop, designing context enrichment for a multi-step agent, adding memory retrieval to a streaming tool pipeline.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["execution-control", "architecture"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

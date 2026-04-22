@@ -1,0 +1,10 @@
+{
+  "name": "structured-output-across-providers",
+  "description": "Gets reliable structured output from LLM calls when supporting multiple providers with inconsistent tool-calling and structured output capabilities. TRIGGER when: building an agent that must work across multiple LLM providers, parsing structured JSON from LLM responses without native tool calling, LLM-based classification or selection step produces unparseable output, adding fallback logic for structured output extraction.",
+  "author": "Assaf Elovic",
+  "repository": "gpt-researcher",
+  "category": ["tools", "architecture"],
+  "source": "external https://github.com/assafelovic/gpt-researcher.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "9e4a19ae"
+}

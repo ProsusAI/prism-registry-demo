@@ -1,0 +1,10 @@
+{
+  "name": "remote-config-validation-atomicity",
+  "description": "Remote config validation for interdependent fields: why to reject the entire config object rather than clamping individual fields. TRIGGER when designing validation for remotely-tunable configuration objects with fields that constrain each other, when choosing between whole-object rejection vs. per-field clamping in a validation schema, or when debugging a service that behaved unexpectedly after a remote config push. Load when writing validation for any config that is served remotely and has cross-field constraints.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["execution-control", "operations-deployment"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

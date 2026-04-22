@@ -1,0 +1,10 @@
+{
+  "name": "context-compression-in-rag-pipelines",
+  "description": "Manages context accumulation and compression when passing retrieved content to LLMs across multi-step retrieval pipelines. TRIGGER when: building a RAG pipeline where multiple retrieval steps accumulate context, retrieved context exceeds model context window limits, balancing retrieval recall against LLM input cost, implementing recursive or depth-based research that accumulates context across levels.",
+  "author": "Assaf Elovic",
+  "repository": "gpt-researcher",
+  "category": ["RAG", "state-memory"],
+  "source": "external https://github.com/assafelovic/gpt-researcher.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "9e4a19ae"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "tool-interface-design-for-code-agents",
+  "description": "Architectural decisions for designing the tool layer of agents that execute code, covering tool granularity, action parsing compatibility, and task termination mechanisms. TRIGGER when: designing tools for an agent that runs shell commands or code, choosing between one generic execution tool and many specialized tools, adding support for models that lack native tool-call APIs, implementing task completion detection in a code-execution agent, building an agent that must work across multiple execution environments.",
+  "author": "Kilian Lieret, Carlos E. Jimenez",
+  "repository": "mini-swe-agent",
+   "category": ["architecture"],
+  "source": "external https://github.com/SWE-agent/mini-swe-agent.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "f921ec3"
+}

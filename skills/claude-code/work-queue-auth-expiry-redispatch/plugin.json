@@ -1,0 +1,10 @@
+{
+  "name": "work-queue-auth-expiry-redispatch",
+  "description": "Work queues with short-lived auth credentials: why token expiry requires re-dispatching the claimed work item, not just refreshing the token. TRIGGER when building a work queue (Redis Streams, SQS, Kafka, RabbitMQ) where consumers authenticate with short-lived credentials (JWTs, OAuth tokens, signed claims), when debugging a consumer that appears healthy but receives no new work, or when designing token refresh for long-running queue consumers. Load when combining any ACK/claim-based queue with short-lived auth.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["networking", "execution-control"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

@@ -1,0 +1,10 @@
+{
+  "name": "anthropic-api-tool-dispatch",
+  "description": "Anthropic API tool use: detecting when the model has called a tool and dispatching tool execution correctly. TRIGGER when: implementing tool dispatch in a streaming API loop, when debugging tool calls that are silently missed, or when a team member asks why stop_reason should not be used as the tool-dispatch signal. Load when writing any code that processes streaming responses for tool use.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["tools", "execution-control"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

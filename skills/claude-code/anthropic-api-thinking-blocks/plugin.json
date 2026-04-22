@@ -1,0 +1,10 @@
+{
+  "name": "anthropic-api-thinking-blocks",
+  "description": "Anthropic API extended thinking: how thinking blocks must be preserved and when they cause 400 errors. TRIGGER when: implementing extended thinking in a multi-turn agentic loop, when debugging 400 errors with 'thinking blocks cannot be modified', when implementing model fallback that switches from a thinking-enabled model, or when deciding what to strip before a retry. Load when writing any code that handles extended thinking across multiple turns.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["execution-control", "state-memory"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

@@ -1,0 +1,10 @@
+{
+  "name": "recursive-pipeline-resilience",
+  "description": "Makes multi-step and recursive agent pipelines resilient to failures, concurrency explosions, and redundant external calls. TRIGGER when: building a pipeline that spawns recursive sub-tasks, agent pipeline fails mid-execution and loses all accumulated work, concurrent sub-tasks overwhelm external APIs or accumulate shared state unsafely, long-running agent tasks need checkpointing or resume capability.",
+  "author": "Assaf Elovic",
+  "repository": "gpt-researcher",
+  "category": ["execution-control", "operations-deployment"],
+  "source": "external https://github.com/assafelovic/gpt-researcher.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "9e4a19ae"
+}

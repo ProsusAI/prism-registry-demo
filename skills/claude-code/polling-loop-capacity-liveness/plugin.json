@@ -1,0 +1,10 @@
+{
+  "name": "polling-loop-capacity-liveness",
+  "description": "Polling loops with capacity throttling: how to prevent tight-loop failures when a polling service enters an at-capacity state. TRIGGER when: designing a polling loop that has a 'throttled' or 'at capacity' mode, when configuring sleep intervals for capacity-throttled polling, or when debugging a service that appears to be looping at HTTP-round-trip speed. Load when writing any poll loop that can enter a reduced-activity mode.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["execution-control", "networking"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

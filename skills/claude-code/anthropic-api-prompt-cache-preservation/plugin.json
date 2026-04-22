@@ -1,0 +1,10 @@
+{
+  "name": "anthropic-api-prompt-cache-preservation",
+  "description": "Anthropic API prompt caching: how to keep server-side cache hits stable across a long agentic session. TRIGGER when designing session state models for agentic applications, when debugging unexpected cache misses after feature flag changes, when deciding whether to re-evaluate eligibility or feature headers per-turn, or when configuring compaction to avoid busting the prompt cache. Load even before cache misses are observed — these decisions must be made at design time.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["state-memory", "networking"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

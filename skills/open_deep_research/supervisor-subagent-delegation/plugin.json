@@ -1,0 +1,10 @@
+{
+  "name": "supervisor-subagent-delegation",
+  "description": "Structures how a supervisor agent delegates, constrains, and communicates with parallel sub-agents to prevent redundant work and coordination failures. TRIGGER when: building a supervisor that dynamically delegates to sub-agents, sub-agents produce redundant or overlapping research, supervisor fires all tasks at once without assessing intermediate results, sub-agents lack sufficient context to complete tasks independently, agent over-parallelizes simple queries or under-parallelizes complex ones.",
+  "author": "Lance Martin / LangChain",
+  "repository": "open_deep_research",
+  "category": ["architecture", "execution-control"],
+  "source": "external https://github.com/langchain-ai/open_deep_research.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "4ef14c1"
+}

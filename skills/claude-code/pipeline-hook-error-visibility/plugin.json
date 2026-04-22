@@ -1,0 +1,10 @@
+{
+  "name": "pipeline-hook-error-visibility",
+  "description": "Ensure optional post-step hooks in a processing pipeline surface failures rather than silently swallowing them. TRIGGER when: adding a hook invocation to a processing pipeline, designing optional post-processing callbacks, wiring post-sampling or post-tool hooks into an agentic loop.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["execution-control", "monitoring-evaluation"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}

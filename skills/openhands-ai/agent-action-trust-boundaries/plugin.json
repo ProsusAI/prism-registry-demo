@@ -1,0 +1,10 @@
+{
+  "name": "agent-action-trust-boundaries",
+  "description": "Addresses the trust architecture problem where autonomous agents assess their own action risk, creating self-referential safety bypasses. TRIGGER when: building an agent that executes side-effectful actions, designing confirmation or approval gates for agent actions, agent has filesystem or network access in multi-tenant environments, implementing risk classification for autonomous tool use.",
+  "author": "OpenHands / All Hands AI",
+  "repository": "openhands-ai",
+  "category": ["security", "execution-control"],
+  "source": "external https://github.com/OpenHands/OpenHands.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "238cab4d0"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "context-budget-in-multi-stage-pipelines",
+  "description": "Manages token budgets across multi-stage agent pipelines to prevent context degradation and token limit failures at each stage. TRIGGER when: building a multi-stage pipeline where outputs from one stage feed the next, agent hits token limits during later pipeline stages, planning quality degrades as accumulated context grows, raw tool outputs inflate context beyond model capacity.",
+  "author": "Lance Martin / LangChain",
+  "repository": "open_deep_research",
+  "category": ["state-memory", "architecture"],
+  "source": "external https://github.com/langchain-ai/open_deep_research.git",
+ "commit_date": "31-03-2026",
+  "source_hash": "4ef14c1"
+}

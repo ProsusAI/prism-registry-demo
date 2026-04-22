@@ -1,0 +1,10 @@
+{
+  "name": "agent-resource-budgeting",
+  "description": "Dual-layer resource budget enforcement for agents — context window budget via observation-level truncation and monetary cost budget via per-agent plus global tracking. TRIGGER when: agent tool outputs inflate message history and risk context overflow, running multiple agent instances in parallel with a shared cost ceiling, agent crashes on context window exceeded with no recovery, cost tracking errors crash the agent instead of degrading gracefully.",
+  "author": "Kilian Lieret, Carlos E. Jimenez",
+  "repository": "mini-swe-agent",
+  "category": ["operations-deployment"],
+  "source": "external https://github.com/SWE-agent/mini-swe-agent.git",
+  "commit_date": "31-03-2026",
+  "source_hash": "f921ec3"
+}

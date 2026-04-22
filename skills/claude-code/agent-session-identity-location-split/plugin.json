@@ -1,0 +1,10 @@
+{
+  "name": "agent-session-identity-location-split",
+  "description": "Agent session design: separating stable session identity from mutable working location. TRIGGER when: designing session storage for agents that support worktrees, remote execution, or mid-session directory changes; when debugging resume failures after a working directory change; when comparing session IDs across API versions or compat layers; or when a team member asks why getCwd() should not be used to derive session file paths.",
+  "author": "Anthropic",
+  "repository": "claude-code",
+  "category": ["architecture", "persistence"],
+  "source": "external",
+  "commit_date": "01-04-2026",
+  "source_hash": ""
+}
