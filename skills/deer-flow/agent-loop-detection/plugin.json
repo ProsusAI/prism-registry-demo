@@ -1,0 +1,12 @@
+{
+  "name": "agent-loop-detection",
+  "description": "Detects and breaks agent execution cycles when the model repeatedly issues identical tool calls without making progress. TRIGGER when: agents repeat the same tool calls across turns, a model gets stuck in a self-reinforcing pattern, infinite agent loops exhaust quota, a hard termination signal is needed without crashing the run or losing conversation state.",
+  "author": "larabasegg",
+  "repository": "deer-flow",
+  "category": [
+    "execution-control"
+  ],
+  "source": "external https://github.com/bytedance/deer-flow.git",
+  "commit_date": "04-05-2026",
+  "source_hash": "64e0f53"
+}
