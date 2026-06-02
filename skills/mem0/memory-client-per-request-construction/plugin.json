@@ -1,0 +1,13 @@
+{
+  "name": "memory-client-per-request-construction",
+  "description": "Memory or AI clients that perform network validation on construction must be instantiated once and reused — per-request construction adds a round-trip per request and causes concurrent validation storms under load. TRIGGER when: initializing a memory or AI client inside a request handler or tool call, designing dependency injection for a service with a remote memory or AI backend.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "networking",
+    "operations-deployment"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

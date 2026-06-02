@@ -1,0 +1,13 @@
+{
+  "name": "file-backed-store-implicit-path",
+  "description": "File-backed embedded stores must require an explicit path in config — auto-injected temp paths create disk-backed behavior invisible to callers and lost on container restart. TRIGGER when: configuring a file-backed vector store or embedded database, deploying a service that uses an embedded store to a containerized environment.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "persistence",
+    "operations-deployment"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

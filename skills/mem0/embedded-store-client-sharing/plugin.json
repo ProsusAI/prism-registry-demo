@@ -1,0 +1,13 @@
+{
+  "name": "embedded-store-client-sharing",
+  "description": "File-backed embedded stores (RocksDB, LMDB) allow only one writer per path — multiple lazy-initialized clients on the same path deadlock or crash. TRIGGER when: initializing two logical stores backed by the same embedded database, using an embedded vector store alongside a secondary index on the same storage path.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "persistence",
+    "state-memory"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "async-client-sync-constructor-io",
+  "description": "Avoid synchronous network I/O inside async client constructors — it blocks the event loop during construction and stalls all concurrent requests. TRIGGER when: adding API key validation or network ping to an async client constructor, designing an async SDK wrapper around a synchronous HTTP library.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "networking",
+    "execution-control"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

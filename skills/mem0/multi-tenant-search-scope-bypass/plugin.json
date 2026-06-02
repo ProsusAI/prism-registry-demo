@@ -1,0 +1,13 @@
+{
+  "name": "multi-tenant-search-scope-bypass",
+  "description": "In multi-tenant memory systems, env vars or runtime flags that widen search scope beyond the requesting user must be explicitly audited — they bypass per-user identity isolation and expose cross-tenant data. TRIGGER when: adding a global-search or admin-mode feature to a multi-tenant system, implementing env-var-controlled search scope overrides.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "security",
+    "state-memory"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

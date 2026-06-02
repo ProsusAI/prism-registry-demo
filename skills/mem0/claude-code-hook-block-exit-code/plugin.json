@@ -1,0 +1,13 @@
+{
+  "name": "claude-code-hook-block-exit-code",
+  "description": "Claude Code PreToolUse hooks must exit 2 to block tool execution — exit 1 signals hook failure but allows the tool to proceed. TRIGGER when: writing a Claude Code PreToolUse hook that should prevent a tool from executing, debugging a hook that runs but does not block the tool.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "tools",
+    "security"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}
