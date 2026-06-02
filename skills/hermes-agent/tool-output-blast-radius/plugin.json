@@ -1,0 +1,13 @@
+{
+  "name": "tool-output-blast-radius",
+  "description": "Large tool outputs silently overflow the context window or cause request failures misdiagnosed as prompt-length errors. TRIGGER when: building agents that call file, search, or code-execution tools; debugging context overflow on tool-heavy tasks; handling LLM API errors after tool-rich turns.",
+  "author": "NousResearch",
+  "repository": "hermes-agent",
+  "category": [
+    "tools",
+    "architecture"
+  ],
+  "source": "external https://github.com/NousResearch/hermes-agent.git",
+  "commit_date": "02-06-2026",
+  "source_hash": "964ef681"
+}

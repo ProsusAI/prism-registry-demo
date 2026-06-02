@@ -1,0 +1,13 @@
+{
+  "name": "agent-memory-integrity",
+  "description": "Agent memory systems degrade LLM prefix caching, allow prompt injection via persisted content, and create inconsistent state when live writes update both the store and the in-context representation simultaneously. TRIGGER when: designing a memory system for a persistent agent, debugging prompt cache misses after memory writes, or adding external memory providers to an agent.",
+  "author": "NousResearch",
+  "repository": "hermes-agent",
+  "category": [
+    "state-memory",
+    "security"
+  ],
+  "source": "external https://github.com/NousResearch/hermes-agent.git",
+  "commit_date": "02-06-2026",
+  "source_hash": "964ef681"
+}

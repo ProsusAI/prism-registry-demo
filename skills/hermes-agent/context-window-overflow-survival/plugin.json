@@ -1,0 +1,13 @@
+{
+  "name": "context-window-overflow-survival",
+  "description": "Agent conversations that span many turns overflow the context window, causing silent truncation, lost task state, or infinite retry loops. TRIGGER when: designing a long-running agent, adding context compression, debugging an agent that appears to restart mid-task or retries indefinitely, or observing model amnesia on extended conversations.",
+  "author": "NousResearch",
+  "repository": "hermes-agent",
+  "category": [
+    "architecture",
+    "state-memory"
+  ],
+  "source": "external https://github.com/NousResearch/hermes-agent.git",
+  "commit_date": "02-06-2026",
+  "source_hash": "964ef681"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "multi-agent-cost-integrity",
+  "description": "Multi-agent systems bleed iteration budgets on programmatic tool calls and create unbounded cost loops through recursive delegation. TRIGGER when: implementing a delegation or subagent system, adding code-execution or batch-processing tools to an agent, or debugging agents that exhaust their iteration budget faster than expected.",
+  "author": "NousResearch",
+  "repository": "hermes-agent",
+  "category": [
+    "execution-control",
+    "architecture"
+  ],
+  "source": "external https://github.com/NousResearch/hermes-agent.git",
+  "commit_date": "02-06-2026",
+  "source_hash": "964ef681"
+}
