@@ -1,7 +1,7 @@
 {
   "generated_by": "prism-registry",
-  "generated_at": "2026-06-02T07:54:19Z",
-  "skill_count": 53,
+  "generated_at": "2026-06-02T08:14:30Z",
+  "skill_count": 60,
   "skills": [
     {
       "name": "context-overflow-in-tool-calling-agents",
@@ -488,6 +488,104 @@
       "commit_date": "31-03-2026",
       "source_hash": "9e4a19ae",
       "path": "skills/gpt-researcher/structured-output-across-providers"
+    },
+    {
+      "name": "agent-memory-integrity",
+      "description": "Agent memory systems degrade LLM prefix caching, allow prompt injection via persisted content, and create inconsistent state when live writes update both the store and the in-context representation simultaneously. TRIGGER when: designing a memory system for a persistent agent, debugging prompt cache misses after memory writes, or adding external memory providers to an agent.",
+      "author": "NousResearch",
+      "repository": "hermes-agent",
+      "category": [
+        "state-memory",
+        "security"
+      ],
+      "source": "external https://github.com/NousResearch/hermes-agent.git",
+      "commit_date": "02-06-2026",
+      "source_hash": "964ef681",
+      "path": "skills/hermes-agent/agent-memory-integrity"
+    },
+    {
+      "name": "context-window-overflow-survival",
+      "description": "Agent conversations that span many turns overflow the context window, causing silent truncation, lost task state, or infinite retry loops. TRIGGER when: designing a long-running agent, adding context compression, debugging an agent that appears to restart mid-task or retries indefinitely, or observing model amnesia on extended conversations.",
+      "author": "NousResearch",
+      "repository": "hermes-agent",
+      "category": [
+        "architecture",
+        "state-memory"
+      ],
+      "source": "external https://github.com/NousResearch/hermes-agent.git",
+      "commit_date": "02-06-2026",
+      "source_hash": "964ef681",
+      "path": "skills/hermes-agent/context-window-overflow-survival"
+    },
+    {
+      "name": "llm-api-error-disambiguation",
+      "description": "LLM API error codes and HTTP status codes frequently carry multiple semantically distinct meanings that require different recovery actions. TRIGGER when: implementing retry logic for an LLM API client, debugging agents that loop on recoverable errors, or building failover logic across LLM providers.",
+      "author": "NousResearch",
+      "repository": "hermes-agent",
+      "category": [
+        "networking",
+        "architecture"
+      ],
+      "source": "external https://github.com/NousResearch/hermes-agent.git",
+      "commit_date": "02-06-2026",
+      "source_hash": "964ef681",
+      "path": "skills/hermes-agent/llm-api-error-disambiguation"
+    },
+    {
+      "name": "llm-provider-failover-architecture",
+      "description": "LLM provider reliability strategies that seem correct \u2014 key rotation, backoff with jitter \u2014 fail at scale due to credential ordering, correlated retries, and missing circuit breakers. TRIGGER when: implementing retry or failover logic for an LLM gateway, debugging thundering-herd rate-limit storms, or building a multi-provider routing layer.",
+      "author": "NousResearch",
+      "repository": "hermes-agent",
+      "category": [
+        "networking",
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/NousResearch/hermes-agent.git",
+      "commit_date": "02-06-2026",
+      "source_hash": "964ef681",
+      "path": "skills/hermes-agent/llm-provider-failover-architecture"
+    },
+    {
+      "name": "multi-agent-cost-integrity",
+      "description": "Multi-agent systems bleed iteration budgets on programmatic tool calls and create unbounded cost loops through recursive delegation. TRIGGER when: implementing a delegation or subagent system, adding code-execution or batch-processing tools to an agent, or debugging agents that exhaust their iteration budget faster than expected.",
+      "author": "NousResearch",
+      "repository": "hermes-agent",
+      "category": [
+        "execution-control",
+        "architecture"
+      ],
+      "source": "external https://github.com/NousResearch/hermes-agent.git",
+      "commit_date": "02-06-2026",
+      "source_hash": "964ef681",
+      "path": "skills/hermes-agent/multi-agent-cost-integrity"
+    },
+    {
+      "name": "persistent-agent-security-surfaces",
+      "description": "Agents that write or modify their own persistent configuration create attack vectors \u2014 malicious tasks can plant injections in files that execute in future sessions. TRIGGER when: building an agent that learns or saves reusable skill/config files, implementing capability gates or redaction controls, or supporting multi-user deployments of a shared agent.",
+      "author": "NousResearch",
+      "repository": "hermes-agent",
+      "category": [
+        "security",
+        "architecture"
+      ],
+      "source": "external https://github.com/NousResearch/hermes-agent.git",
+      "commit_date": "02-06-2026",
+      "source_hash": "964ef681",
+      "path": "skills/hermes-agent/persistent-agent-security-surfaces"
+    },
+    {
+      "name": "tool-output-blast-radius",
+      "description": "Large tool outputs silently overflow the context window or cause request failures misdiagnosed as prompt-length errors. TRIGGER when: building agents that call file, search, or code-execution tools; debugging context overflow on tool-heavy tasks; handling LLM API errors after tool-rich turns.",
+      "author": "NousResearch",
+      "repository": "hermes-agent",
+      "category": [
+        "tools",
+        "architecture"
+      ],
+      "source": "external https://github.com/NousResearch/hermes-agent.git",
+      "commit_date": "02-06-2026",
+      "source_hash": "964ef681",
+      "path": "skills/hermes-agent/tool-output-blast-radius"
     },
     {
       "name": "ai-extraction-failure-observable",
