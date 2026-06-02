@@ -1,0 +1,13 @@
+{
+  "name": "hybrid-search-threshold-calibration",
+  "description": "In hybrid search systems (semantic + keyword + signal boost), similarity thresholds must be calibrated to the combined score distribution — standard semantic defaults cause recall collapse. TRIGGER when: configuring a similarity threshold for hybrid search results, migrating from pure-semantic to hybrid retrieval.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "RAG",
+    "data-learning"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

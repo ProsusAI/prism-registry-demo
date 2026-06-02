@@ -1,0 +1,13 @@
+{
+  "name": "hybrid-search-candidate-overfetch",
+  "description": "Hybrid search (semantic + keyword + signal boost) must over-fetch semantic candidates before re-ranking — fetching exactly top-k from the vector store gives de facto pure-semantic results regardless of hybrid scoring. TRIGGER when: implementing hybrid search over a vector store, adding keyword or entity-boost re-ranking on top of semantic retrieval.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "RAG",
+    "architecture"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

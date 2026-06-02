@@ -1,0 +1,13 @@
+{
+  "name": "ai-ml-degradation-observability",
+  "description": "Make AI/ML dependency degradation (missing model, failed import, unavailable component) visible to operators without interrupting the caller. TRIGGER when: designing fallback behavior for an optional AI/ML dependency, adding a new AI/ML step with graceful degradation, implementing health checks for a system with optional AI components.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "monitoring-evaluation",
+    "architecture"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ai-extraction-failure-observable",
+  "description": "Distinguish LLM extraction failures from genuinely-empty results so callers can implement retry and alerting. TRIGGER when: designing error handling for an LLM extraction step, implementing retry logic for an AI-backed processing pipeline, adding monitoring to a pipeline that returns results from an LLM call.",
+  "author": "mem0ai",
+  "repository": "mem0",
+  "category": [
+    "monitoring-evaluation",
+    "architecture"
+  ],
+  "source": "external https://github.com/mem0ai/mem0",
+  "commit_date": "02-06-2026",
+  "source_hash": "8e65ce91"
+}
