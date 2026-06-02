@@ -1,7 +1,7 @@
 {
   "generated_by": "prism-registry",
-  "generated_at": "2026-04-22T14:54:18Z",
-  "skill_count": 43,
+  "generated_at": "2026-06-02T07:54:19Z",
+  "skill_count": 53,
   "skills": [
     {
       "name": "context-overflow-in-tool-calling-agents",
@@ -488,6 +488,146 @@
       "commit_date": "31-03-2026",
       "source_hash": "9e4a19ae",
       "path": "skills/gpt-researcher/structured-output-across-providers"
+    },
+    {
+      "name": "ai-extraction-failure-observable",
+      "description": "Distinguish LLM extraction failures from genuinely-empty results so callers can implement retry and alerting. TRIGGER when: designing error handling for an LLM extraction step, implementing retry logic for an AI-backed processing pipeline, adding monitoring to a pipeline that returns results from an LLM call.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "monitoring-evaluation",
+        "architecture"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/ai-extraction-failure-observable"
+    },
+    {
+      "name": "ai-ml-degradation-observability",
+      "description": "Make AI/ML dependency degradation (missing model, failed import, unavailable component) visible to operators without interrupting the caller. TRIGGER when: designing fallback behavior for an optional AI/ML dependency, adding a new AI/ML step with graceful degradation, implementing health checks for a system with optional AI components.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "monitoring-evaluation",
+        "architecture"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/ai-ml-degradation-observability"
+    },
+    {
+      "name": "async-client-sync-constructor-io",
+      "description": "Avoid synchronous network I/O inside async client constructors \u2014 it blocks the event loop during construction and stalls all concurrent requests. TRIGGER when: adding API key validation or network ping to an async client constructor, designing an async SDK wrapper around a synchronous HTTP library.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "networking",
+        "execution-control"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/async-client-sync-constructor-io"
+    },
+    {
+      "name": "claude-code-hook-block-exit-code",
+      "description": "Claude Code PreToolUse hooks must exit 2 to block tool execution \u2014 exit 1 signals hook failure but allows the tool to proceed. TRIGGER when: writing a Claude Code PreToolUse hook that should prevent a tool from executing, debugging a hook that runs but does not block the tool.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "tools",
+        "security"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/claude-code-hook-block-exit-code"
+    },
+    {
+      "name": "embedded-store-client-sharing",
+      "description": "File-backed embedded stores (RocksDB, LMDB) allow only one writer per path \u2014 multiple lazy-initialized clients on the same path deadlock or crash. TRIGGER when: initializing two logical stores backed by the same embedded database, using an embedded vector store alongside a secondary index on the same storage path.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "persistence",
+        "state-memory"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/embedded-store-client-sharing"
+    },
+    {
+      "name": "file-backed-store-implicit-path",
+      "description": "File-backed embedded stores must require an explicit path in config \u2014 auto-injected temp paths create disk-backed behavior invisible to callers and lost on container restart. TRIGGER when: configuring a file-backed vector store or embedded database, deploying a service that uses an embedded store to a containerized environment.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "persistence",
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/file-backed-store-implicit-path"
+    },
+    {
+      "name": "hybrid-search-candidate-overfetch",
+      "description": "Hybrid search (semantic + keyword + signal boost) must over-fetch semantic candidates before re-ranking \u2014 fetching exactly top-k from the vector store gives de facto pure-semantic results regardless of hybrid scoring. TRIGGER when: implementing hybrid search over a vector store, adding keyword or entity-boost re-ranking on top of semantic retrieval.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "RAG",
+        "architecture"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/hybrid-search-candidate-overfetch"
+    },
+    {
+      "name": "hybrid-search-threshold-calibration",
+      "description": "In hybrid search systems (semantic + keyword + signal boost), similarity thresholds must be calibrated to the combined score distribution \u2014 standard semantic defaults cause recall collapse. TRIGGER when: configuring a similarity threshold for hybrid search results, migrating from pure-semantic to hybrid retrieval.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "RAG",
+        "data-learning"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/hybrid-search-threshold-calibration"
+    },
+    {
+      "name": "memory-client-per-request-construction",
+      "description": "Memory or AI clients that perform network validation on construction must be instantiated once and reused \u2014 per-request construction adds a round-trip per request and causes concurrent validation storms under load. TRIGGER when: initializing a memory or AI client inside a request handler or tool call, designing dependency injection for a service with a remote memory or AI backend.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "networking",
+        "operations-deployment"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/memory-client-per-request-construction"
+    },
+    {
+      "name": "multi-tenant-search-scope-bypass",
+      "description": "In multi-tenant memory systems, env vars or runtime flags that widen search scope beyond the requesting user must be explicitly audited \u2014 they bypass per-user identity isolation and expose cross-tenant data. TRIGGER when: adding a global-search or admin-mode feature to a multi-tenant system, implementing env-var-controlled search scope overrides.",
+      "author": "mem0ai",
+      "repository": "mem0",
+      "category": [
+        "security",
+        "state-memory"
+      ],
+      "source": "external https://github.com/mem0ai/mem0",
+      "commit_date": "02-06-2026",
+      "source_hash": "8e65ce91",
+      "path": "skills/mem0/multi-tenant-search-scope-bypass"
     },
     {
       "name": "agent-resource-budgeting",
