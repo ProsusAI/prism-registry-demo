@@ -1,0 +1,13 @@
+{
+  "name": "llm-api-error-disambiguation",
+  "description": "LLM API error codes and HTTP status codes frequently carry multiple semantically distinct meanings that require different recovery actions. TRIGGER when: implementing retry logic for an LLM API client, debugging agents that loop on recoverable errors, or building failover logic across LLM providers.",
+  "author": "NousResearch",
+  "repository": "hermes-agent",
+  "category": [
+    "networking",
+    "architecture"
+  ],
+  "source": "external https://github.com/NousResearch/hermes-agent.git",
+  "commit_date": "02-06-2026",
+  "source_hash": "964ef681"
+}

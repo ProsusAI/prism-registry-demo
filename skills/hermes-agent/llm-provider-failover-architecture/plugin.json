@@ -1,0 +1,13 @@
+{
+  "name": "llm-provider-failover-architecture",
+  "description": "LLM provider reliability strategies that seem correct — key rotation, backoff with jitter — fail at scale due to credential ordering, correlated retries, and missing circuit breakers. TRIGGER when: implementing retry or failover logic for an LLM gateway, debugging thundering-herd rate-limit storms, or building a multi-provider routing layer.",
+  "author": "NousResearch",
+  "repository": "hermes-agent",
+  "category": [
+    "networking",
+    "operations-deployment"
+  ],
+  "source": "external https://github.com/NousResearch/hermes-agent.git",
+  "commit_date": "02-06-2026",
+  "source_hash": "964ef681"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "persistent-agent-security-surfaces",
+  "description": "Agents that write or modify their own persistent configuration create attack vectors — malicious tasks can plant injections in files that execute in future sessions. TRIGGER when: building an agent that learns or saves reusable skill/config files, implementing capability gates or redaction controls, or supporting multi-user deployments of a shared agent.",
+  "author": "NousResearch",
+  "repository": "hermes-agent",
+  "category": [
+    "security",
+    "architecture"
+  ],
+  "source": "external https://github.com/NousResearch/hermes-agent.git",
+  "commit_date": "02-06-2026",
+  "source_hash": "964ef681"
+}
